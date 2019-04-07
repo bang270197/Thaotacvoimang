@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<input type="button" value="Add" onclick="add();">
+<input type="button" value="Display" onclick="display();">
+<div id="result"></div>
+<script>
+    var x=0;
+    let arr=new Array();
+    function add() {
+
+        arr[x]=document.getElementById('input').value;
+       document.getElementById('result').innerHTML="Vi tri "+x+" Co gia tri"+arr[x];
+        x++;
+        document.getElementById('input').value=" ";
+    }
+    function display() {
+        let e = "<hr/>";
+        for (i=0;i<arr.length;i++)
+        {
+            e=e+"Vi tri"+i+" Co gia tri la"+ arr[i]+"</br>";
+        }
+        document.getElementById('result').innerText=e;
+    }
+</script>
+</body>
+</html>
